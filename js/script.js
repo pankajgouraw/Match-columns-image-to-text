@@ -1,4 +1,4 @@
-$(window).on('load', function(){
+$(document).ready(function(){
  var fieldLinks;
  let index = 0;
  $('.headerText').text(header);
@@ -127,7 +127,6 @@ $(window).on('load', function(){
   $('#next').hide();
  }
 
-
-
 }); // document ready function end here...
+
 

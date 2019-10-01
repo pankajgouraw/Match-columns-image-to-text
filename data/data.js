@@ -30,10 +30,11 @@ const data = [
 
 	{
 		'listA' :[
+		            "sad.png",
 	                "next.png",
 	                "prev.png",
-	                "happy.png",
-	                "sad.png"
+	                "happy.png"
+	                
 		        ],
 
 		'listB' :[
@@ -54,8 +55,9 @@ const data = [
 	{
 				'listA' :[
 	                "next.png",
-	                "prev.png",
+	               
 	                "happy.png",
+	                 "prev.png",
 	                "sad.png"
 		        ],
 

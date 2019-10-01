@@ -14,9 +14,15 @@ body{
 .fieldsLinker{
 	overflow: auto;
 }
-	#bonds .fieldsLinker  .FL-right  li{
-        position: relative;
+
+#bonds .fieldsLinker  .FL-right  li{
+    position: relative;
+    height: 73px;
+    display: flex;
+    align-items: center;
 	}
+
+
   .signImg{
          position: absolute;
          left:5px;
@@ -65,8 +71,8 @@ background-image: radial-gradient(#3dcd47,#1a1a1a);
     border: 1px solid #fff;
 }
 
-#next{background:none; float:right;}
-#prev{background:none; float:left;}
+#next{background:none; float:right;padding:0px;}
+#prev{background:none; float:left;padding:0px;}
 #next img{    width: 40px;
     margin-top: -10px;}
 #prev img{    width: 40px;
@@ -77,7 +83,7 @@ background-image: radial-gradient(#3dcd47,#1a1a1a);
 }
 
 img.optImg{ width:60px; }
-.FL-left li{text-align:center;}
+.FL-left li{text-align:center;     height: 73px;}
 
 @media screen and (max-width: 500px) {
 .dropSuggestions{flex-wrap:wrap;}

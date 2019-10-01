@@ -214,7 +214,7 @@ let FL_Factory_Lists = null;
 		$leftDiv
 			.appendTo($main)
 			.addClass("FL-left")
-			.css({ "float": "left",'height':373, "width": "40%", "display": "inline-block", "text-align": "left", "white-space": "nowrap" })
+			.css({ "float": "left", "width": "40%", "display": "inline-block", "text-align": "left", "white-space": "nowrap" })
 			.append(dropDownForLists.clone());
 		$leftDiv.find("select")
 			.attr("id","select1")
@@ -281,9 +281,9 @@ var drawColumnsContentA = function(){
 				.attr("draggable","true")
 				.css({"width":"80%"})
 				// .text(x);
-				// .append(`<img class='optImg' src=${'img/' +x} />`);
-			var $img = $(`<img class='optImg' src=${'img/' +x} />`);
-			    $img.appendTo($div);
+				.append(`<img class='optImg' src=${'img/' +x} />`);
+			// var $img = $(`<img class='optImg' src=${'img/' +x} />`);
+			//     $img.appendTo($div);
 			var $eraseIcon = $("<i></i>");
 			$eraseIcon
 				.appendTo($li)
@@ -297,6 +297,8 @@ var drawColumnsContentA = function(){
 				.attr("draggable","false")
 				.css({"right":"8px","color":"#aaa","position": "absolute","top":"50%","transform": "translateY(-50%)"});
 		});
+
+		// drawColumnsContentA();
 	// Computing the vertical offset of the middle of each cell.
 	ListHeights1 = [];
 	$(factory).find(".FL-main .FL-left li").each(function(i){
@@ -497,10 +499,10 @@ var drawColumnsContentA = function(){
 var createCanvas = function(){
    canvasId = "cnv_"+Date.now();
 		var w = $midDiv.width();
-		var h2 = $rightDiv.height();
-		var h1 = $leftDiv.height();
+		var h2 = $rightDiv.innerHeight();
+		var h1 = $leftDiv.innerHeight();
 		var h = h1 >= h2 ? h1 : h2;
-		console.log('canvas height :'+h);
+		console.log('canvas height :'+$leftDiv.height());
 		$canvas =  $("<canvas></canvas>");
 		$canvas
 			.appendTo($midDiv)
@@ -606,6 +608,8 @@ var setListeners = function(){
 		draw();
 	});
 }
+
+
 	$.fn.fieldsLinker = function(action,input) {
 		factory = this;
 	    if (action == "init") {
@@ -816,6 +820,8 @@ var setListeners = function(){
 			onError = true;
 			console.log(errMsg + "no action parameter provided (param 1)" );
 		}
+
+		// end here
 	}
 
 	
